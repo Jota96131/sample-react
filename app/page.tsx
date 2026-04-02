@@ -23,7 +23,7 @@ export default async function Home() {
 
   const getMicrocmsItems = async () => {
     const response = await axios.get<MicrocmsResponse>(
-      "https://[あなたのドメイン].microcms.io/api/v1/blogs",
+      "https://dg4uyk666s.microcms.io/api/v1/blogs",
       {
         headers: {
           "X-MICROCMS-API-KEY": `${process.env.MICROCMS_API_KEY}`,
