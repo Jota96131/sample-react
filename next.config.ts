@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  cacheComponents: true, // Next.js 16の設定
 };
 
 export default nextConfig;

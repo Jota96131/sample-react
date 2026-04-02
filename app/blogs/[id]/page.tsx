@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 async function BlogContent({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return (
@@ -13,5 +15,9 @@ export default function BlogDetail({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  return <BlogContent params={params} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogContent params={params} />
+    </Suspense>
+  );
 }
